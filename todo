@@ -1,14 +1,6 @@
-root@a1d97b8a6868:/app# history
-
-pip install gunicorn
-
-mdir /app
-
-vim /app/heyworld.py
-
-yum install gcc
-
-pip install uvicorn
-
-
+#done
 gunicorn heyworld:app -w 4 -k uvicorn.workers.UvicornWorker
+
+
+# gunicorn ; not worts to fix yes
+# [2019-11-26 21:31:50 +0000] [14] [INFO] ASGI 'lifespan' protocol appears unsupported.

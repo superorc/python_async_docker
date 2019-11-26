@@ -2,6 +2,7 @@ FROM python:slim
 
 WORKDIR /app
 
+# apt purge vs remove has 0 effect
 RUN apt update && apt install gcc -y && pip install uvicorn gunicorn && apt remove gcc -y
 
 # use one or diff RUNs, size is remaining the same
