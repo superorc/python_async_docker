@@ -1,0 +1,14 @@
+root@a1d97b8a6868:/app# history
+
+pip install gunicorn
+
+mdir /app
+
+vim /app/heyworld.py
+
+yum install gcc
+
+pip install uvicorn
+
+
+gunicorn heyworld:app -w 4 -k uvicorn.workers.UvicornWorker
