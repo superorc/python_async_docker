@@ -5,7 +5,13 @@ import os, logging
 @given(u'making an authorized request to Telegram bot API')
 def step_impl(context):
     base_url = 'https://api.telegram.org/bot'
-    token = os.environ['TELEGRAM_DICK22_BOT_TOKEN']
+
+    try:
+        token = os.environ['BOT_TOKEN']
+    except Exception as e:
+        logging.error("Please import Telegram API bot token into BOT_TOKEN env variable")
+        raise
+
 #    token = 'test'
     my_method = '/getMe'
 
